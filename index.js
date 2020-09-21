@@ -26,5 +26,7 @@ const userRouter = require("./routes/user");
 app.use("/", userRouter);
 
 app.listen(PORT, () => {
-  console.log('listening on ${PORT}');
+  console.log(`listening on ${PORT}`);
 });
+
+module.exports = app;
