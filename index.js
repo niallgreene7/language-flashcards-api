@@ -3,11 +3,11 @@
 /* eslint-disable no-template-curly-in-string */
 /* eslint-disable no-console */
 require("dotenv").config();
-const cors = require("cors");
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const PORT = 5000;
+const cors = require("cors");
+const PORT = process.env.PORT || 5000;
 
 app.use(cors({ credentials: true, origin: true }));
 app.options('*', cors());
