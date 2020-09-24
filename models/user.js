@@ -7,13 +7,11 @@ const userSchema = new mongoose.Schema({
   forename: {
     type: String,
     required: true,
-    lowercase: true,
     trim: true,
   },
   surname: {
     type: String,
     required: true,
-    lowercase: true,
     trim: true,
   },
   translateFrom: {
