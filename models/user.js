@@ -17,13 +17,13 @@ const userSchema = new mongoose.Schema({
   translateFrom: {
     type: String,
     required: true,
-    lowercase: true,
+    uppercase: true,
     trim: true,
   },
   translateTo: {
     type: String,
     required: true,
-    lowercase: true,
+    uppercase: true,
     trim: true,
   },
   email: {
