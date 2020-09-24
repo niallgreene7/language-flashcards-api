@@ -52,4 +52,18 @@ router.post("/login", function (req, res) {
     });
 });
 
+//update
+router.patch("/updateUser", function (req, res) {
+  const id = JSON.parse(req.query.id);
+  console.log(req.body);
+  User.findByIdAndUpdate(
+    id,
+    req.body,
+    { new: true },
+  )
+    .then((updated) => res.status(200).json(updated))
+    .catch((err) =>
+    res.status(400).json({ error: "User could not be updated." })
+    );
+});
 module.exports = router;
