@@ -10,7 +10,8 @@
   "engines": {
     "node": "14.x"
   },
-  "proxy": "https://translation-app-mcrcodes.herokuapp.com",
+
+  "proxy": "https://translation-app-mcrcodes.herokuapp.com/",
   "author": "",
   "license": "ISC",
   "dependencies": {
