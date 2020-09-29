@@ -15,7 +15,6 @@ const flashcardSchema = new mongoose.Schema({
   translatedPhrase: {
     type: String,
     required: true,
-    uppercase: true,
     trim: true,
   },
   translateFrom: {
