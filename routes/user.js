@@ -18,6 +18,7 @@ router.post("/", async (req, res) => {
     translateTo: req.body.translateTo,
     email: req.body.email,
     password: req.body.password,
+    image: req.body.image,
   });
 
   try {
