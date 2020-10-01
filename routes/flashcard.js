@@ -15,7 +15,6 @@ router.post("/addFlashcard", async (req, res) => {
         userID: req.body.userID,
         initialPhrase: req.body.initialPhrase,
         translatedPhrase: req.body.translatedPhrase,
-        translateFrom: req.body.translateFrom,
         translateTo: req.body.translateTo,
     });
 
