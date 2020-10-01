@@ -38,6 +38,9 @@ const userSchema = new mongoose.Schema({
     required: true,
     set: (password) => bcrypt.hashSync(password, 10),
   },
+  image: {
+    type: String,
+  },
 });
 
 userSchema.methods.validatePassword = function validatePassword(password) {

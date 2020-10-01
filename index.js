@@ -12,6 +12,7 @@ const db = mongoose.connection;
 const userRouter = require("./routes/user");
 const flashcardRouter = require("./routes/flashcard");
 
+var sign_s3 = require('./controllers/sign_s3');
 app.use(cors({ credentials: true, origin: true }));
 app.options('*', cors());
 
@@ -30,6 +31,7 @@ app.listen(PORT, () => {
   console.log(`listening on ${PORT}`);
   app.use("/", userRouter);
   app.use("/", flashcardRouter);
+  app.use('/sign_s3', sign_s3.sign_s3); 
 });
 
 module.exports = app;

@@ -10,11 +10,11 @@
   "engines": {
     "node": "14.x"
   },
-
   "proxy": "https://translation-app-mcrcodes.herokuapp.com/",
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.764.0",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
