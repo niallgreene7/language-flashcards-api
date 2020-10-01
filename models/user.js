@@ -14,12 +14,6 @@ const userSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
-  translateFrom: {
-    type: String,
-    required: true,
-    uppercase: true,
-    trim: true,
-  },
   translateTo: {
     type: String,
     required: true,

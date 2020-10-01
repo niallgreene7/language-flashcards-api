@@ -14,7 +14,6 @@ router.post("/", async (req, res) => {
   const user = await User({
     forename: req.body.forename,
     surname: req.body.surname,
-    translateFrom: req.body.translateFrom,
     translateTo: req.body.translateTo,
     email: req.body.email,
     password: req.body.password,
