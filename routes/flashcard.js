@@ -41,18 +41,14 @@ router.get("/myFlashcards", async  (req, res) => {
 
 //delete a flashcard
 router.delete("/deleteFlashcard", async  (req, res) => {
-  const cardID = req.query.cardID
-  Flashcard
-      .findByPk(cardID)
-      .then(
-        Flashcard.destroy({ where: { id } }).then(() => {
-          res.status(204).json({ message: 'Flashcard Deleted' });
-        })
-        )
-      .catch(
-        (err) => res.status(404).json({ error: "Flashcards cannot found." })
-        );
+  const id = req.query.id;
+  Flashcard.findByIdAndRemove(id)
+    .then((removed) => res.status(200).json(removed))
+    .catch((err) =>
+      res.status(400).json({ error: "Flashcards cannot found." })
+    );
   });
 
 module.exports = router;
+
 
